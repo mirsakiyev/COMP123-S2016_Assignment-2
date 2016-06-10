@@ -10,7 +10,9 @@ namespace COMP123_Assignment_2
     {
         static void Main(string[] args)
         {
-            Hero batman = new Hero();
+            Hero batman = new Hero("Batman");
+            //SuperHero superman = new SuperHero("Superman");
+
             //batman.Fight();
             //batman.Show();
         }

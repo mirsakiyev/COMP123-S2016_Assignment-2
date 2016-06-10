@@ -28,10 +28,7 @@ namespace COMP123_Assignment_2
         private string _name;
 
 
-        //private int _randomMultiplier;
-
-
-
+       
         //----------------------------------------------------------------------------------------------
         //-----------------------------PUBLIC PROPERTIES------------------------------------------------
         //----------------------------------------------------------------------------------------------
@@ -66,9 +63,9 @@ namespace COMP123_Assignment_2
         * @param {string} name
        */
 
-        public Hero()
+        public Hero(string name)
         {
-            this.Name = "Batman";
+            this.Name = name;
             generateAbilities();
         }
 
