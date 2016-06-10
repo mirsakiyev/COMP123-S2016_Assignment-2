@@ -14,7 +14,7 @@ namespace COMP123_Assignment_2
      */
     public class Hero
     {
-        string separator = "--------------------";
+        public string separator = "--------------------";
         Random rnd = new Random();
 
         //----------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ namespace COMP123_Assignment_2
         private int _speed;
         private int _health;
         private string _name;
-
+     
 
        
         //----------------------------------------------------------------------------------------------
