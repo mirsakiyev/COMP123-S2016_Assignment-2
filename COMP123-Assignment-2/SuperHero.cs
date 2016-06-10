@@ -8,6 +8,7 @@ namespace COMP123_Assignment_2
 {
      class SuperHero:Hero
     {
+        // creating a random number 
         Random rnd = new Random();
 
 
@@ -15,7 +16,7 @@ namespace COMP123_Assignment_2
         //--------------------------PRIVATE INSTANCE VARIABLES------------------------------------------
         //----------------------------------------------------------------------------------------------
 
-        private string[] _superPowers = new string[6];
+        List<string> _superPowers = new List<string>();
 
         //----------------------------------------------------------------------------------------------
         //-----------------------------PUBLIC PROPERTIES------------------------------------------------
@@ -28,7 +29,7 @@ namespace COMP123_Assignment_2
          * 
          * @property {string} SuperPowers
          */
-        public string[] SuperPowers
+        public List<string> SuperPowers
         {
             get { return this._superPowers; }
             set { this._superPowers = value; }
@@ -68,41 +69,24 @@ namespace COMP123_Assignment_2
      * @returns {void}
     */
         private void _generateRandomPowers()
-        {
-            
-            
-
-            string randomPower_1="";
-            string randomPower_2="";
-            string randomPower_3="";
-
-            _superPowers[0] = "Super Speed";
-            _superPowers[1] = "Super Strength";
-            _superPowers[2] = "Body Armour";
-            _superPowers[3] = "Flight";
-            _superPowers[4] = "Fire Generation";
-            _superPowers[5] = "Weather Control";
-
-            int tmp = 0;
-
+        {                    
+            _superPowers.Add("Super Speed");
+            _superPowers.Add("Super Strength");
+            _superPowers.Add("Body Armour");
+            _superPowers.Add("Flight");
+            _superPowers.Add("Fire Generation");
+            _superPowers.Add("Weather Control");
+            Console.WriteLine("       Super Powers: ");
+           
             for (int i = 0; i < 3; i++)
-            {            
+            {
                 int indexForRandomPower = 0;
-
-                indexForRandomPower = rnd.Next(1, 7);
-                Console.WriteLine(_superPowers[indexForRandomPower]);
-                 
-
+                indexForRandomPower = rnd.Next(1, _superPowers.Count);
+                Console.WriteLine(separator);
+                Console.WriteLine(" *  " + _superPowers[indexForRandomPower]);              
+                _superPowers.RemoveAt(indexForRandomPower);
             }
-            
-            
-                        
+            Console.WriteLine(separator);
         }
-
-
-
-
-
-
     }
 }
