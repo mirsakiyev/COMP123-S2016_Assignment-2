@@ -69,22 +69,22 @@ namespace COMP123_Assignment_2
      * @returns {void}
     */
         private void _generateRandomPowers()
-        {                    
-            _superPowers.Add("Super Speed");
-            _superPowers.Add("Super Strength");
-            _superPowers.Add("Body Armour");
-            _superPowers.Add("Flight");
-            _superPowers.Add("Fire Generation");
-            _superPowers.Add("Weather Control");
+        {
+            SuperPowers.Add("Super Speed");
+            SuperPowers.Add("Super Strength");
+            SuperPowers.Add("Body Armour");
+            SuperPowers.Add("Flight");
+            SuperPowers.Add("Fire Generation");
+            SuperPowers.Add("Weather Control");
             Console.WriteLine("       Super Powers: ");
            
             for (int i = 0; i < 3; i++)
             {
                 int indexForRandomPower = 0;
-                indexForRandomPower = rnd.Next(1, _superPowers.Count);
+                indexForRandomPower = rnd.Next(1, SuperPowers.Count);
                 Console.WriteLine(separator);
-                Console.WriteLine(" *  " + _superPowers[indexForRandomPower]);              
-                _superPowers.RemoveAt(indexForRandomPower);
+                Console.WriteLine(" *  " + SuperPowers[indexForRandomPower]);
+                SuperPowers.RemoveAt(indexForRandomPower);
             }
             Console.WriteLine(separator);
         }
